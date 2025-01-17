@@ -1,0 +1,55 @@
+.title-Cards {
+  margin-bottom: 60px;
+  top: 100px;
+}
+
+.title-Cards h2 {
+  margin-bottom: 8px;
+}
+
+.card-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  scrollbar-width: none; /* For Firefox */
+}
+.card-list::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.card-list img {
+  width: 240px;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.card-list .card {
+  position: relative;
+}
+
+.card-list .card p {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media (max-width: 768px) {
+  .hero-caption {
+    bottom: 15%;
+    left: 4%;
+  }
+
+  .caption-img {
+    max-width: 300px;
+  }
+
+  .hero-caption p {
+    max-width: 90%;
+    font-size: 15px;
+  }
+
+  .card-list img {
+    width: 180px; /* Smaller cards for smaller screens */
+  }
+}
