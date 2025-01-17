@@ -14,6 +14,11 @@
   z-index: 1;
 }
 
+.navbar h2 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
 .navbar-left {
   display: flex;
   align-items: center;

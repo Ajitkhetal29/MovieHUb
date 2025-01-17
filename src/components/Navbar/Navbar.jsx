@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <img src={logo} alt="" />
+        <h2>MovieHUB</h2> 
         <ul>
           <li>Home</li>
           <li>TV Shows</li>

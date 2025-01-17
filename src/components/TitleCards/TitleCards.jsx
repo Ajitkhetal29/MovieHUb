@@ -4,12 +4,11 @@ import "./TitleCards.css";
 
 import cards_data from "../../assets/cards/Cards_data";
 
-const TitleCards = () => {
+const TitleCards = ({title , category}) => {
   const cardsRef = useRef();
 
   const handleWheel = (e) => {
     e.preventDefault();
-    console.log("hii");
     cardsRef.current.scrollLeft += e.deltaY;
   };
 
@@ -19,7 +18,7 @@ const TitleCards = () => {
 
   return (
     <div className="title-Cards">
-      <h2>Popular On MovieHub</h2>
+      <h2>{title?title:"Popular On MovieHub"}</h2>
       <div className="card-list" ref={cardsRef}>
         {cards_data.map((card, index) => {
           return (
