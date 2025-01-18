@@ -33,6 +33,7 @@
   position: absolute;
   bottom: 15px;
   right: 15px;
+  color: white;
 }
 
 @media (max-width: 768px) {

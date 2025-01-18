@@ -36,15 +36,15 @@ const Home = () => {
       </div>
       <TitleCards></TitleCards>
       <div className="more-cards">
-      <TitleCards title={'Block Master Movies'} ></TitleCards>
-      <TitleCards title={'Top Pick For You'}></TitleCards>
-      <TitleCards title={'Only On MovieHUB'} ></TitleCards>
-      <TitleCards title={'Upcoming'} ></TitleCards>
-      <Footer></Footer>
-
+        <TitleCards title={"Popular"} category={"popular"}></TitleCards>
+        <TitleCards
+          title={"Top Pick For You"}
+          category={"top_rated"}
+        ></TitleCards>
+        <TitleCards title={"Upcoming"} category={"upcoming"}></TitleCards>
+        <Footer></Footer>
       </div>
     </div>
-
   );
 };
 

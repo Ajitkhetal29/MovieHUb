@@ -1,15 +1,27 @@
-import React from "react";
-import logo from '../../assets/logo.png'
-import search_icon from '../../assets/search_icon.svg'
-import bell_icon from '../../assets/bell_icon.svg'
-import profile_img from '../../assets/profile_img.png'
-import caret_icon from '../../assets/caret_icon.svg'
+import React, { useEffect, useRef } from "react";
+import logo from "../../assets/logo.png";
+import search_icon from "../../assets/search_icon.svg";
+import bell_icon from "../../assets/bell_icon.svg";
+import profile_img from "../../assets/profile_img.png";
+import caret_icon from "../../assets/caret_icon.svg";
 import "./Navbar.css";
 const Navbar = () => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("nav-dark");
+      } else {
+        navRef.current.classList.remove("nav-dark");
+      }
+    });
+  });
+
   return (
-    <div className="navbar">
+    <div ref={navRef} className="navbar">
       <div className="navbar-left">
-        <h2>MovieHUB</h2> 
+        <h2>MovieHUB</h2>
         <ul>
           <li>Home</li>
           <li>TV Shows</li>
@@ -32,8 +44,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-
-  )
+  );
 };
 
 export default Navbar;
